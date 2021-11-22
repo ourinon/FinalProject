@@ -1,0 +1,94 @@
+body{
+   
+   background-color: white;
+      position: relative;
+   
+}
+
+.ProfileModify {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  border: 0px solid black;
+  height: 600px;
+  max-width: 940px;
+  position: relative;
+  top: 100px;
+  
+     box-shadow: 2px 2px 5px;
+   border-radius: 7px;
+}
+
+.ProfileModify h2 {
+  font-weight: bold;
+}
+
+.ProfileModify p {
+  margin-top: 10px;
+}
+
+.ProfileModify table {
+  border: 1px solid  #0B0C2A;
+  height: 340px;
+  width: 850px;
+  font-size: 20px;
+  margin-top: 40px;
+/*   padding: 5px 12px; */
+  border-left: 0px solid steelblue;
+  border-right: 0px solid steelblue;
+
+  background-color: rgb(180, 180, 180, 0.1);
+}
+
+.ProfileModify table th {
+/*   background-color: rgb(121, 182, 161); */
+  background-color: black;
+border: 0px solid white;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 25px;
+}
+
+.ProfileModify table td {
+  border-bottom: 0px solid rgb(180, 180, 180);
+
+  width: 500px;
+}
+
+.ProfileModify table input[type="button"] {
+  color: black;
+  transition: 0.3s;
+  margin-left: 60px;
+  background-color: rgb(235, 233, 225);
+  border: 1px solid black;
+  border-radius: 0px;
+  padding: 3px 15px;
+}
+
+.ProfileModify input[type="button"]:hover {
+  background-color: rgb(235, 233, 225, 0.5);
+  color: rgb(0, 0, 0);
+}
+
+.ProfileModify1 {
+  margin: 20px 0px 0px 730px;
+}
+
+.ProfileModify1 input[type="submit"] {
+  background-color: rgb(255, 255, 255);
+  padding: 8px 30px;
+  color: black;
+  border: 2px solid steelblue;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+.ProfileModify1 input[type="submit"]:hover {
+  background-color: cadetblue;
+  box-shadow: 5px 5px 5px, -5px -5px 5px;
+  color: white;
+}

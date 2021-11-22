@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+p{
+	text-align: center;
+}
+
+span{
+	position: relative;
+	top: 25px;
+	color: white;
+}
+
+textarea#msgTxtArea{
+	margin-left: 60px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+input#loginBtn{
+	margin-left: 64px;
+padding: 5px 10px;
+}
+
+form{
+	justify-content: center;
+}
+
+#content{
+	
+	border-radius: 0px 0px 20px 0px;
+}
+
+#content:hover{
+	
+	  border: 2px solid blue;
+   padding: 3px 8px;
+
+}
+
+

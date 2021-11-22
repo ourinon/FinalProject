@@ -1,0 +1,16 @@
+
+.scale1 {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+  
+}
+.scale1:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  border-radius: 5px;
+ 
+}
+.img1 {width:229.86px; height:325px; overflow:hidden }   /* 부모를 벗어나지 않고 내부 이미지만 확대 */

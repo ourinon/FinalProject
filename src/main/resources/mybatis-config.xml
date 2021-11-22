@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="game" type="com.study.game.dto.GameDto"/>
+		<typeAlias alias="review" type="com.study.game.dto.ReviewDTO"/>
+		<typeAlias alias="member" type="com.study.game.dto.MemberDTO"/>
+		<typeAlias alias="board" type="com.study.game.dto.BoardDTO"/>
+		<typeAlias alias="reply" type="com.study.game.dto.ReplyDTO"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="mappers/GameMapper.xml" />
+		<mapper resource="mappers/MemberMapper.xml" />
+		<mapper resource="mappers/BoardMapper.xml" />
+	</mappers>
+</configuration>

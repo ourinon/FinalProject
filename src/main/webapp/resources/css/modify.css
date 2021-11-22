@@ -1,0 +1,94 @@
+body{
+
+   position: relative;
+   background-color: white;
+}
+
+.ModifyChange {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  align-items: center; 
+    border: 0px solid black;
+    height:600px;
+    max-width: 990px;
+    position: relative;
+    top: 100px;
+    
+      box-shadow: 2px 2px 5px;
+   border-radius: 7px;
+  }
+  
+
+
+.ModifyChange h2 {
+  font-weight: bold;
+  /*  float: left; */
+}
+
+.ModifyChange p {
+  margin-top: 10px;
+  
+}
+  
+  
+  .ModifyChange table {
+    border: 1px solid black;
+    height: 300px;
+    width: 850px;
+    font-size: 20px;
+    margin-top: 40px;
+  /*   padding: 5px 12px; */
+  }
+  
+  .ModifyChange table th {
+  background-color: #0B0C2A;
+    width: 200px;
+    height: 50px;
+    color: white;
+    border-bottom: 0.5px solid white;
+  }
+  
+  .ModifyChange table td {
+    border-bottom: 1px solid black;
+    width: 500px;
+    text-align: center;
+  }
+  
+  .ModifyChange input[type="text"] {
+    width: 350px;
+    height: 50px;
+    padding: 5px 12px;
+    outline: none;
+    border: 1px solid black;
+    margin: auto 0px auto 10px;
+     font-size: 20px;
+  }
+  
+  .ModifyChange input:focus {
+    border: 2px solid blue;
+    padding: 4px 11px;
+    height: 50px;
+  }
+  
+
+  .ModifyChange1 {
+    margin: 20px 0px 0px 716px;
+  }
+  
+  .ModifyChange1 input[type="submit"] {
+     background-color: rgb(255, 255, 255);
+    padding: 8px 30px;
+    color: black;
+    border: 2px solid steelblue;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  
+  .ModifyChange1 input[type="submit"]:hover {
+     background-color: cadetblue;
+       box-shadow: 5px 5px 5px, -5px -5px 5px;
+      color: white;
+  
+  }

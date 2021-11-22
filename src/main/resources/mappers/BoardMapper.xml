@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.game.BoardMapper">
+	<select id="BoardList" resultType="board">
+		<![CDATA[
+	    --전체 게시글 리스트 내림차순 출력
+    	select apply_id as seq,
+    		ap_bbs as target,
+    		bbs_hh as hhead,
+    		ap_writer as writer_id,
+    		mm_nickname as wnick,
+    		mm_img as wimg,
+    		ap_date as wdate,
+    		bbs_title as title,
+    		ap_content as content,
+    		ap_like as likes,
+    		bbs_views as views,
+    		ap_state as state
+	    from ApplyAIO, MemberAIO
+	    where ap_writer = member_id
+	    and ap_bbs = #{target}
+	    and ap_state != 0
+	    order by apply_id desc
+	    ]]>
+	</select>
+	
+	<select id="BoardOneId" resultType="board">
+		<![CDATA[
+	    --ID로 게시글 하나 출력
+    	select apply_id as seq,
+    		ap_bbs as target,
+    		bbs_hh as hhead,
+    		ap_writer as writer_id,
+    		mm_nickname as wnick,
+    		mm_img as wimg,
+    		ap_date as wdate,
+    		bbs_title as title,
+    		ap_content as content,
+    		ap_like as likes,
+    		bbs_views as views,
+    		ap_state as state
+	    from ApplyAIO, MemberAIO
+	    where ap_writer = member_id
+	    and ap_bbs is not null
+	    and apply_id = #{seq}
+	    ]]>
+	</select>
+	
+	<select id="BoardListLikes" resultType="board">
+      <![CDATA[
+       --사용자 북마크 게시글 리스트 내림차순 출력
+       select apply_id as seq,
+          ap_bbs as target,
+          bbs_hh as hhead,
+          ap_writer as writer_id,
+          mm_nickname as wnick,
+          mm_img as wimg,
+          ap_date as wdate,
+          bbs_title as title,
+          ap_content as content,
+          ap_like as likes,
+          bbs_views as views,
+          ap_state as state
+       from ApplyAIO, MemberAIO, Likes
+       where ap_writer = member_id
+       and ap_bbs is not null
+       and ap_state != 0
+       and apply_id = likes_table
+      and likes_member = #{writer_id}
+       order by apply_id desc
+       ]]>
+   </select>
+   
+   
+	
+	<insert id="BoardInsert">
+		<![CDATA[
+	    --게시글 입력
+    	insert into ApplyAIO(
+	    	apply_id,
+	    	ap_bbs,
+	    	bbs_hh,
+	    	ap_writer,
+	    	ap_date,
+	    	bbs_title,
+	    	ap_content,
+	    	ap_like,
+	    	bbs_views,
+	    	ap_state
+		) values(
+			ApplyAIO_seq.nextVal,
+			${target},
+			'${hhead}',
+			${writer_id},
+			sysdate,
+			'${title}',
+			'${content}',
+			0,0,1
+		)
+	    ]]>
+	</insert>
+	
+	<update id="BoardUpdate">
+		<![CDATA[
+	    --ID로 게시글 수정
+    	update ApplyAIO set
+	    	ap_bbs = ${target},
+			bbs_hh = '${hhead}',
+			bbs_title = '${title}',
+			ap_content = '${content}',
+			ap_state = 2
+		where apply_id = #{seq}
+	    ]]>
+	</update>
+	
+	<update id="BoardDelete">
+		<![CDATA[
+		--ID로 게시글 삭제(비활성화)
+		update ApplyAIO set
+			ap_state = 0
+		where apply_id = #{seq}
+		]]>
+	</update>
+	
+	<update id="BoardUpdateViews">
+		<![CDATA[
+	    --ID로 게시글 수정(조회수)
+    	update ApplyAIO set
+	    	bbs_views = ${views}
+		where apply_id = #{seq}
+	    ]]>
+	</update>
+	
+	<update id="BoardUpdateLikes">
+		<![CDATA[
+	    --ID로 게시글 수정(좋아요)
+    	update ApplyAIO set
+	    	ap_like = (
+	    		select count(*)
+	    		from Likes
+	    		where likes_table = #{seq}
+	    	)
+		where apply_id = #{seq}
+	    ]]>
+	</update>
+	
+	<select id="ReplyList" resultType="reply">
+		<![CDATA[
+	    --게시글 ID로 게시글 댓글 출력(대댓글 포함)
+    	select apply_id as seq,
+			ap_reply as target_b,
+			ap_rreply as target_r,
+			ap_writer as writer_id,
+			mm_nickname as wnick,
+			mm_img as wimg,
+			ap_date as rp_date,
+			ap_content as rp_content,
+			ap_state as rp_state
+	    from ApplyAIO, MemberAIO
+	    where ap_writer = member_id
+	    and ap_reply = #{rp_target}
+	    order by ap_rreply desc, apply_id asc  
+	    ]]>
+	</select>
+	
+	<select id="ReplyOneId" resultType="reply">
+		<![CDATA[
+	    --ID로 게시글 댓글 하나 출력
+    	select apply_id as seq,
+			ap_reply as target_b,
+			ap_rreply as target_r,
+			ap_writer as writer_id,
+			ap_date as rp_date,
+			ap_content as rp_content,
+			ap_state as rp_state
+	    from ApplyAIO
+	    where apply_id = #{seq}  
+	    ]]>
+	</select>
+	
+	<select id="BoardListSB" resultType="board">
+      <![CDATA[
+       --사용자 게시글 리스트 내림차순 출력
+       select apply_id as seq,
+          ap_bbs as target,
+          bbs_hh as hhead,
+          ap_writer as writer_id,
+          mm_nickname as wnick,
+          mm_img as wimg,
+          ap_date as wdate,
+          bbs_title as title,
+          ap_content as content,
+          ap_like as likes,
+          bbs_views as views,
+          ap_state as state
+       from ApplyAIO, MemberAIO
+       where ap_writer = member_id
+         and ap_writer = #{writer_id}
+       and ap_bbs is not null
+      and ap_state != 0
+       order by apply_id desc
+       ]]>
+   </select>
+	
+	<insert id="ReplyInsert">
+		<![CDATA[
+	    --댓글 입력
+    	insert into ApplyAIO(
+    		apply_id,
+    		ap_reply,
+    		ap_rreply,
+    		ap_writer,
+    		ap_date,
+    		ap_content,
+    		ap_state
+    	) values(
+    		ApplyAIO_seq.nextVal,
+			${target_b},
+			${target_r},
+			${writer_id},
+			'${wdate}',
+			'${content}',
+			1
+    	)
+	    ]]>
+	</insert>
+	
+	<update id="ReplyUpdate">
+		<![CDATA[
+	    --ID로 댓글 수정
+    	update ApplyAIO set
+    		ap_content = '${rp_content}',
+    		ap_state = 2
+		where apply_id = #{rp_id}
+	    ]]>
+	</update>
+	
+	<update id="ReplyDelete">
+		<![CDATA[
+	    --ID로 댓글 삭제(비활성화)
+    	update ApplyAIO set
+    		ap_content = '삭제된 댓글입니다.',
+    		ap_state = 0
+		where apply_id = #{rp_id}
+	    ]]>
+	</update>
+</mapper>

@@ -1,0 +1,76 @@
+
+
+.insert_form{
+    width: 90%;
+    height: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insert_form table tr th span{
+ 
+ color: white;
+}
+
+.insert_form table tr td span{
+ 
+ color: white;
+ margin-left: 25px;
+}
+
+/* .insert_form table tr td input{
+ 
+width: 200px;
+
+}
+
+ */
+/* 
+
+
+
+.insert_act{
+    width: 75%;
+    height: 500px;
+
+   border: 1px solid black;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 50px;
+    background-color: gray;
+}
+
+.insert_act tr:not(:last-child) th, .insert_act tr td{
+    border: 1px solid black;
+}
+
+.insert_act tr th:not(:last-child){
+    background-color: rgb(63, 63, 112 );
+    color: white;
+}
+
+.insert_act tr td{
+    border-bottom: 1px solid rgb(180, 180, 180, 0.6);
+    background-color: rgb(255,255,255,0.7)
+}
+
+.insert_act tr td input, .insert_act tr td textarea, .insert_act tr th input{
+    margin-left: 1%;
+}
+
+.insert_act tr:nth-child(-n+3) td input{
+    width: 47%;
+}
+
+.insert_act tr:last-child th input[type="submit"], .insert_act tr:last-child input[type="reset"]{
+    background-color: rgb(46, 80, 112);
+    padding: 8px 30px;
+    color: white;
+    border: 2px solid steelblue;
+    transition: 0.3s;
+    border-radius: 5px;
+    letter-spacing: 0px;
+} */

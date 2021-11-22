@@ -1,0 +1,134 @@
+.commercial{
+   width: 100%;
+   height: 250px;
+   
+ background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-dark-color-cartoon-cartoon-vibrating-fault-wind-background-image_275797.jpg");
+   background-size: contain;
+   
+   margin-top: 30px;
+   border: 0px solid white;
+    border-radius: 20px;
+}
+
+form {
+   width: 100%;
+   height: 650px;
+}
+
+
+/* 내부 input css */
+.input_colr{
+	background-color: #1d1e39;
+	color: white;
+	padding-left: 15px;
+}
+
+
+
+select {
+   width: 100%;
+}
+
+table {
+   width: 100%;
+   height: 100%;
+}
+
+h3 {
+   color: white;
+   margin-bottom: 20px;
+}
+
+input[type="text"] {
+   width: 100%;
+}
+
+textarea {
+   width: 100%;
+   height: 100%;
+   overflow-y: auto;
+}
+
+tr td {
+   margin-top: 15px;
+}
+
+tr:first-child {
+   height: 35px;
+}
+
+tr:first-child h3 {
+   float: left;
+   margin-left: 6px;
+   position: relative;
+   top: 30px;
+}
+
+tr:first-child input {
+   width: 105px;
+   height: 45px;
+   background-color: rgb(46, 80, 112);
+   color: white;
+   border: none;
+   text-align: center;
+   float: right;
+   position: relative;
+   top: 30px;
+}
+
+form table button {
+   width: 105px;
+   height: 45px;
+   background-color: rgb(46, 80, 112);
+   color: white;
+   border: none;
+   text-align: center;
+   float: left;
+   position: relative;
+   right: 9.2%;
+   top: 30px;
+
+}
+
+tr:nth-child(2) {
+   height: 25px;
+}
+
+tr:nth-child(2) th {
+
+}
+
+tr:nth-child(3) {
+   height: 45px;
+}
+
+table tr td {
+   border: 1px solid rgb(0, 0, 0);
+}
+
+table tr:not(:first-child) th {
+
+   
+   
+   background-color: #e53637;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+
+}
+
+select {
+   height: 95%;
+}
+
+input[type="text"] {
+   height: 95%;
+}
+
+select, input, textarea {
+   border: none;
+}
+
+select:focus, input:focus, textarea:focus {
+   outline: none;
+}

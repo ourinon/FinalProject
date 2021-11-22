@@ -1,0 +1,194 @@
+.commercial{
+   width: 100%;
+   height: 250px;
+   
+   margin-top: 30px;
+   
+ background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-dark-color-cartoon-cartoon-vibrating-fault-wind-background-image_275797.jpg");
+   background-size: contain;
+    border: 0px solid white;
+    border-radius: 20px;
+}
+
+h1 {
+   color: white;
+   margin-left: 5%;
+   margin-top: 25px;
+}
+
+.top {
+   width: 100%;
+   height: 560px;
+   box-sizing: border-box;
+}
+
+
+.bottom {
+   width: 100%;
+   height: 1200px;
+   box-sizing: border-box;
+   background-color: #1d1e39;
+}
+
+.container table {
+   width: 90%;
+   height: 600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.container table tr th {
+ /*   background: rgb(63, 63, 112); */
+   color: white;
+   font-size: 30px;
+   
+   height: 50px;
+}
+
+.container table tr:not(:nth-child(2)) td {
+  /*  background: rgb(180, 180, 180, 0.6); */
+  
+  color: white;
+}
+
+.container table tr:nth-child(2) td {
+   display: flex;
+   
+   margin-bottom: -60px;
+   
+   color: white;
+}
+
+#profile{
+   border: 0px solid white;
+   
+   width: 100px;
+   height: 100px;
+   
+   margin-left: 5px;
+   background-repeat: no-repeat; 
+}
+
+#profile_box{
+   margin-left: 5%;
+   
+   line-height: 20px;
+}
+
+.container table tr:last-child {
+   height: 435px;
+}
+
+.container button {
+   background-color: rgb(46, 80, 112);
+   color: white;
+   border: none;
+   text-align: center;
+   width: 100px;
+   height: 50px;
+   float: left;
+   margin-left: 20px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+   
+   position: relative;
+   left: 3.2%;
+}
+
+.container button.rewrite {
+   float: right;
+   width: 115px;
+   margin-right: 98px;
+}
+
+.container button a {
+   color: white;
+   text-decoration: none;
+}
+
+.container form input {
+   background-color: rgb(46, 80, 112);
+   color: white;
+   border: none;
+   text-align: center;
+   width: 100px;
+   height: 50px;
+   float: right;
+   
+   margin-top: 15px;
+   margin-bottom: 15px;
+/*    margin-right: 57px; */
+}
+
+td {
+   padding-left: 10px;
+}
+
+.container form input:hover {
+   cursor: pointer;
+}
+.reply {
+   width: 90%;
+   height: 550px; 
+   margin-left : auto;
+   margin-right: auto;
+   margin-top: 20px;
+}
+
+.reply form {
+   height: 185px; 
+   display : flex;
+   justify-content: center;
+   display: flex;
+}
+
+.reply textarea {
+   width: 80%;
+   height: 90%;
+   margin-top: auto;
+   margin-left: 5%;
+}
+
+.reply button[type="submit"] {
+   width: 15%;
+   height: 100px;
+   margin-top: 30px;
+}
+
+.reply_list{
+   margin-top: 30px;
+   max-height: 300px;
+   overflow-y: auto; 
+}
+
+.reply_box{
+   width: 90%;
+   height: 120px;
+   
+   margin-left: 6%;
+   
+   display: flex;
+   
+   border-bottom: 1px solid white;
+   box-sizing: border-box;
+}
+.reply_box .user_pic{
+   width: 10%;
+   height: 75.13px;
+   border: 1px solid white; 
+   margin-top: auto;
+   margin-bottom: auto;
+}
+.reply_box .user_review{
+   width: 70%;
+   margin-left: 3%;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+.user_review h6{
+   color: white;
+}
+.user_review p{
+   color: lightgrey;
+}

@@ -1,0 +1,251 @@
+div {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* �쑀吏��븷 寃� */
+hr {
+	border: 2px solid black;
+}
+
+.commu_top {
+	width: 90%;
+	height: 700px;
+	text-align: center;
+	border: none;
+}
+
+strong {
+	position: relative;
+	margin-left: 30px;
+}
+
+.commu_top .commu_logo {
+	width: 100%;
+	height: 50%;
+}
+
+.commu_top #commu_chat {
+	width: 90%;
+	height: 40%;
+	display: flex;
+	justify-content: center;
+}
+
+.commu_btm {
+	width: 90%;
+	border: none;
+	background-color: white;
+	margin-top: 110px;
+}
+
+.btm_con {
+	width: 100%;
+	height: 40%;
+	margin-bottom: 90px;
+	background-color: #1d1e39;
+	color: white;
+	margin-bottom: 90px;
+}
+
+.btm_con .search_part {
+	height: 3%;
+	width: 100%;
+	float: right;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.box {
+	float: right;
+}
+
+/* .section-title button.write_btn {
+	float: right;
+	position: relative;
+	right: 2%;
+	bottom: 25px;
+	text-align: center;
+	width: 100px;
+	height: 35px;
+	background-color: rgb(46, 80, 112);
+	color: white;
+	border: 2px solid steelblue;
+} */
+
+.searchbar_option {
+	height: 30px;
+	width: 90px;
+	border: 1px solid gray;
+}
+
+.searchbar_input {
+	width: 200px;
+	height: 27px;
+	border: 1px solid gray;
+	background-color: rgb(238, 237, 237);
+	outline: none;
+}
+
+.searchbar_button {
+	background-color: rgb(4, 185, 4);
+	color: white;
+	width: 55px;
+	height: 31px;
+	margin-left: -6px;
+	border: 0px solid rgb(250, 250, 250);
+	line-height: 1px;
+}
+
+.searchbar_input:focus {
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 0 2px;
+}
+
+/*  �궡�슜 遺�遺� - 寃뚯떆�뙋*/
+.section_content {
+	padding: 10px;
+}
+
+.section_board {
+	width: 100%;
+	font-size: 12px;
+	border-collapse: collapse;
+	border-top: 1px solid black;
+}
+
+.section_board tr {
+	border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.section_board td {
+	border: 0px solid black;
+	padding: 6px;
+	text-align: center;
+}
+
+.section_board tr td:nth-child(3) {
+	text-align: left;
+}
+
+.section_board a {
+	color: black;
+	text-decoration: none;
+	color: white;
+}
+
+.section_board tr td a:hover {
+	text-decoration: underline;
+	color: darkslategrey;
+}
+
+.board_min button {
+	border: none;
+	text-align: center;
+	width: 85px;
+	height: 35px;
+	margin-top: 12px;
+	margin-left: 15px;
+}
+
+.write_btn{
+	float: right;
+	position: relative;
+	right: 2%;
+	bottom: 5px;
+	text-align: center;
+	width: 100px;
+	height: 35px;
+	background-color: rgb(46, 80, 112);
+	color: white;
+	border: 2px solid steelblue;
+	
+}
+
+/* �럹�씠吏� 泥섎━ css*/
+.btm_con .page {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.page li {
+	display: inline-block;
+	list-style: none;
+}
+
+.page a {
+	border: 1px solid black;
+	font-size: 12px;
+	margin-left: 15px;
+	padding: 4px 10px;
+	color: black;
+	text-decoration: none;
+	background-color: white;
+	border-radius: 7px;
+}
+
+.page a:hover {
+	background-color: rgb(214, 214, 214);
+	color: #009f47;
+	text-decoration: underline;
+}
+
+.insert {
+	text-align: center;
+	float: right;
+}
+
+.insert_btn {
+	width: 70px;
+	height: 35px;
+	border: 1px solid black;
+	font-size: 12px;
+	margin-left: 15px;
+	padding: 4px 10px;
+	color: black;
+	text-decoration: none;
+	background-color: white;
+	border-radius: 7px;
+	border: 1px solid black;
+}
+
+/* 寃뚯떆�뙋 紐⑸줉 �빆紐� css */
+.nav_part th {
+	background-color: skyblue;
+	color: white;
+}
+
+/* 寃뚯떆�뙋 �븯�떒 寃��깋 css */
+.search_part input[type="text"] {
+	width: 300px;
+	height: 40px;
+	padding: 5px 12px;
+	border: 1px solid black;
+	position: relative;
+	left: 5%;
+}
+
+.search_part input[type="submit"] {
+	background-color: rgb(46, 80, 112);
+	padding: 18px 50px;
+	color: white;
+	border: 2px solid steelblue;
+	transition: 0.3s;
+	border-radius: 5px;
+	letter-spacing: 0px;
+
+	/*  position: relative;
+  left: 5%; */
+}
+
+.search_part input:focus {
+	border: 2px solid blue;
+	padding: 5px 11px;
+}
+
+.search_part input[type="submit"]:hover {
+	background-color: cadetblue;
+	color: white;
+}
